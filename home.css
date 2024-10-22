@@ -1,0 +1,504 @@
+*{
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    /* /Variables for storing colour/ */
+    --bg-clr:#DECCB4;
+    --light-clr:#07665E;
+    --dark-clr:#d4d1c588;
+}
+body{
+    background-color: var(--bg-clr) !important;
+}
+/*----Hearder----*/
+.top-nav-bar{
+    height: 70px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    margin-bottom: 20px;
+    background-color: var(--light-clr);
+    border-bottom: 3px solid var(--bg-clr);
+    z-index: 2;
+}
+.fa-bars{
+    position: fixed;
+    margin: 15px;
+    margin-left: 35px;
+    color: var(--bg-clr);
+    font-size: 30px;
+    padding: 5px 10px;
+}
+.fa-bars:hover{
+    background-color: var(--bg-clr);
+    color: var(--light-clr);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.logo img{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    margin-left: 60px;
+}
+.search-box{
+    position: fixed;
+    display: inline-flex;
+    width: 60%;
+    margin-left: 150px;
+}
+.form-control{
+    margin-top: 9px;
+    margin-left: 150px;
+    border: 1px solid var(--light-clr) !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: none;
+    height: 45px;
+}
+.input-group-text{
+    background: var(--bg-clr) !important;
+    border: 1px solid var(--bg-clr) !important;
+    margin: 8.5px 10px 0 0 !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    box-shadow: none;
+    height: 45px;
+}
+.fa-search{
+    color: var(--light-clr);
+}
+.fa-user{
+    position: fixed;
+    margin-left: 30px;
+    color: var(--bg-clr);
+    font-size: 25px;
+    margin: 15px;
+    margin-left: 1020px !important;
+    padding: 5px 5px;
+}
+.fa-user:hover{
+    background-color:  var(--bg-clr);
+    color: var(--light-clr);
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.fa-heart{
+    color: var(--bg-clr);
+    font-size: 25px;
+    margin: 15px;
+    margin-left: 1080px;
+    padding: 5px 5px;
+}
+.fa-heart:hover{
+    background-color:  var(--bg-clr);
+    color: var(--light-clr);
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.fa-cart-shopping{
+    position: fixed;
+    margin: 15px;
+    font-size: 25px;
+    color: var(--bg-clr);
+    padding: 5px 5px;
+}
+.fa-cart-shopping:hover{
+    background-color:  var(--bg-clr);
+    color: var(--light-clr);
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.hide{
+    display: none;
+}
+
+/*----Side-menu----*/
+.side-menu{
+    height: auto;
+    margin-top: 70px;
+    width: 17%;
+    font-size: 14px;
+    float:left;
+    z-index: 2;
+    background-color: var(--light-clr);
+    color: var(--bg-clr);
+}
+.side-menu ul{
+    margin-left: 10px;
+}
+.side-menu ul li{
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.side-menu ul li:hover{
+    color: var(--light-clr);
+    background-color: var(--dark-clr);
+    margin-left: -10px;
+    border-radius: 20px;
+    padding: 5px;
+    
+}
+.side-menu ul li ul{
+    display: none;
+    z-index: 10;
+    top: 77px;
+}
+.side-menu ul li:hover ul{
+    display: block;
+    height: 200px;
+    margin-left: 14%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background: var(--light-clr);
+    color: var(--bg-clr);
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 7%;
+}
+.fa-angle-right{
+    margin-top: 4px;
+    margin-right: 8px;
+    float: right;
+}
+
+/*----next-section----*/
+.slider{
+    width: 100%;
+    padding: 10px 10px;
+}
+.carousel{
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0,0.5);
+}
+.slider img{
+    width: 100%;
+    height: 550px;
+}
+
+
+.featured-categories,
+.on-sale,
+.part,
+.on-sale,
+.location{
+    animation: appear 10s linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+@keyframes appear{
+    from{
+        opacity:0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+
+/*----featured-categories----*/
+#box{
+    margin-top: 10px;
+}
+#box .card{
+    box-shadow: 0px 0px 5px black;
+    margin-top: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card h1{
+    padding: 50px;
+    margin: 0;
+    background-color: var(--light-clr);
+}
+.card h1:hover{
+    padding: 50px;
+    margin: 0;
+    background-color: var(--dark-clr);
+    color: var(--light-clr);
+}
+.card p{
+    margin: 0px;
+    padding: 30px;
+    background-color: var(--light-clr);
+    color: var(--bg-clr);
+}
+#box .card:hover{
+    transform: translateY(-10px);
+}
+
+/*---------on-sale-------*/
+.title-box{
+    background-color: var(--light-clr);
+    color: var(--bg-clr);
+    padding: 4px;
+    height: 50px;
+    margin-top: 30px;
+    display: flex;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    width: 200px;
+    animation: slide 2s linear infinite;
+    
+}
+
+.title-box h2{
+    font-size: larger;
+    padding-left: 45px;
+    padding-top: 10px;
+    text-align: center;
+}
+.title-box:hover{
+    background-color: var(--dark-clr);
+    color: var(--light-clr);
+    transition: 2s ease-in-out;
+}
+
+
+.row{
+    padding-top: 30px;
+}
+.row img:hover{
+    transform: scale(1.1);
+}
+
+.part{
+    background-color: var(--dark-heading-clr);
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+.prototype img{
+    margin-left: 35%;
+    margin-top: 10%;
+}
+.title-box2{
+    background-color: var(--light-clr);
+    color: var(--bg-clr);
+    padding: 4px;
+    height: 50px;
+    margin-top: 30px;
+    display: flex;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    width: 200px;
+    animation: slide 2s linear infinite;
+    
+}
+
+/*---------latest-------*/
+
+.title-box2 h2{
+    font-size: larger;
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: center;
+}
+.title-box2:hover{
+    background-color: var(--dark-clr);
+    color: var(--light-clr);
+    transition: 2s ease-in-out;
+}
+
+
+.button{
+    margin-left: 45%;
+    margin-top: 20px;
+  
+
+}
+.button button{
+    padding: 10px 40px;
+    background-color: var(--light-clr);
+    color: var(--bg-clr);
+    border-radius: 300px;
+}
+.button button:hover{
+    background-color: var(--dark-clr);
+    color: var(--light-clr);
+    transition: 2s ease-in-out;
+}
+
+/*---------Location-------*/
+.map{
+    position: relative;
+    flex-basis: 50%;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    margin-top: -220px;
+}
+.map iframe{
+    width: 40%;
+    height: 300px;
+    border: 2px solid transparent;
+    border-radius: 5%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+span a{
+    text-decoration: none;
+    color: var(--light-clr);
+}
+.address {
+    color: var(--light-clr);
+    margin-left: 55%;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+
+.hero-section{
+    background-image: url(https://wallpaperaccess.com/full/1843912.jpg);
+    margin: 5%;
+    height: 500px;
+    background-size:100% 100%;
+    animation: changeImage 20s infinite;
+    /* box-shadow: 10px 10px 10px #f1947d; */
+    border:1px solid white;
+    /* background-color: #218838; */
+}
+@keyframes changeImage{
+    0%{
+        background-image: url(https://wallpaperaccess.com/full/1843912.jpg);
+    }
+    50%{
+        background-image: url(https://img.freepik.com/premium-photo/cookware-hd-8k-wallpaper-stock-photographic-image_853645-67561.jpg);
+    }
+    100%{
+        background-image: url(https://reviewed-com-res.cloudinary.com/image/fetch/s--7SEzU8jH--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_1200/https://reviewed-production.s3.amazonaws.com/1683725962734/Hero-20230509_MadeInCookwareHeroV1_Renzi.PNG);
+    }
+    75%{
+        background-image: url(https://c1.wallpaperflare.com/preview/846/198/477/pans-copper-old-baking-moulds.jpg);
+    }
+    100%{
+        background-image: url(https://e1.pxfuel.com/desktop-wallpaper/586/582/desktop-wallpaper-baking-utensils-cutlery.jpg);
+    }
+}
+
+
+/*---------footer-------*/
+footer{
+    width: 100%;
+    position: absolute;
+    margin-bottom: 0px 0px;
+    padding: 100px 0 0 0;
+    border-top-left-radius: 70px;
+    background-color: var(--light-clr);
+    color: var(--bg-clr);
+}
+.rows{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.cols{
+    flex-basis: 25%;
+    padding: 0px;
+}
+
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: var(--bg-clr);
+}
+.cols h5{
+    width: fit-content;
+    position: relative;
+    margin-left: 15px;
+}
+.underline{
+    width: 100%;
+    height: 5px;
+    background: var(--bg-clr);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left:0;
+    overflow: hidden;
+}
+.underline span{
+    width: 25px;
+    height: 100%;
+    background: var(--dark-clr);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 980px){
+    .top-nav-bar{
+        height: 118px;
+        border: 0;
+        width: 100%;
+    }
+    .search-box{
+        width: 100%;
+        margin-right: 20px;
+    }
+    .side-menu{
+        width: 34%;
+        z-index: 20;
+        top: 133px;
+        position: fixed;
+        font-size: 12px;
+    }
+    .side-menu ul li ul{
+        top: 133px;
+    }
+    .side-menu ul li:hover ul{
+        margin-left: 30%;
+    }
+    #menu-btn{
+        display: block;
+    }
+    .slider{
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    footer{
+        bottom: unset;
+    }
+    .cols{
+        flex-basis: 100%;
+    }
+    
+}
