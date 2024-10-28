@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="addtocart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
+  
+  <!-------------------Header Starts------------------>
+  <header class="top-nav-bar">
+    <label>
+      <input type="checkbox" class="input">
+      <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+      </div>
+            <div class="side-menu">
+              <ul class="ul">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="category.html">PRODUCTS</a></li>
+                <li><a href="#">Pressure Cooker<i class="fa fa-angle-right"></a></i>
+                  <ul>
+                    <li>Aluminium</li>
+                    <li>Hard Anodised</li>
+                    <li>Stainless Steel</li>
+                    <li>Ceramic Nonstick</li>
+                  </ul>
+                </li>
+                <li><a>Frying Pan<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Tava<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Deep fry pans<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Saucepans<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Handi & Bowls<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Stewpot<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Pan<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Casserole<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Patila<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Kadhai<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Cookware Set<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Parts & Accessories<i class="fa fa-angle-right"></a></i></li>
+              </ul>
+            </div>
+          </label>
+        <span><a href="#home.html" class="logo"><img src="logo.png"></a></span>
+        <div class="search-box">
+          <input type="text" placeholder="Search" class="form-control">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+          <span><a href="#"><i class="fa-solid fa-user"></i></a></span>
+          <span><a href="#"><i class="fa-solid fa-heart"></i></a></span>
+          <span><a href="addtocart.html"><i class="fa-solid fa-cart-shopping"></i></a></span>
+  </header>
+   <!-------------------Header Ends------------------>
+  <section class="addtocart">
     <div class="cart-container">
         <h1>MY SHOPPING CART</h1>
         <table class="cart-table">
@@ -16,49 +66,137 @@
                     <th>PRICE</th>
                     <th>QUANTITY</th>
                     <th>TOTAL</th>
+                    <th>REMOVE</th>  
                 </tr>
             </thead>
             <tbody>
+              <!-- Product row 1 -->
                 <tr>
                     <td>
+                        <!-- <div class="cart-items"> -->
+                        <!-- product item 1 -->
                         <div class="product">
                             <img src="deep fry pan.jpg" alt="Deep Fry Pan">
-                            <p>Deep Fry Pan</p>
+                            <p class = "product-name">Deep Fry Pan</p>
                         </div>
                     </td>
-                    <td>Rs. 2,199</td>
+                    <td class="product-price">Rs. 2,199</td>
                     <td>
-                        <div class="quantity-control">
-                            <!-- <button>-</button> -->
-                            <input type="number" value="1" min ="1">
-                            <!-- <button>+</button> -->
-                          </div>
+                        <div class ="quantity-control">
+                            <!-- <button class = "qty-decrease">-</button> -->
+                            <input type ="number" value ="1" class = "cart-quantity" min =1>
+                            <!-- <button class ="qty-increase">+</button> -->
+                        </div>
                       </td>
-                      <td>Rs. 2,199</td>
-                  </tr>
+                      <td class ="product-total">Rs. 2,199</td>
+                      <td>
+                        <button class="remove-btn">✖</button>
+                    </td>
+
+                </tr>
+                <!-- product row 2 -->
                   <tr>
                     <td>
                         <div class="product">
                             <img src="steel sauce pot.jpg" alt="Steel sauce pan">
-                            <p>Steel Sauce Pan</p>
+                            <p class="product-name">Steel Sauce Pan</p>
                         </div>
                     </td>
-                    <td>Rs. 2,399</td>
+                    <td class ="product-price">Rs. 2,399</td>
                     <td>
-                        <div class="quantity-control">
-                            <!-- <button>-</button> -->
-                            <input type="number" value="1" min = "1">
-                            <!-- <button>+</button> -->
-                          </div>
+                        <div class ="quantity-control">
+                            <!-- <button class = "qty-decrease">-</button> -->
+                            <input type ="number" value ="1" class = "cart-quantity" min ="1">
+                            <!-- <button class ="qty-increase">+</button> -->
+                        </div>
                       </td>
-                      <td>Rs. 2,399</td>
+                      <td class = "product-total">Rs. 0</td>
+                      <td>
+                        <button class="remove-btn">✖</button>
+                    </td>
                   </tr>
-              </tbody>
+            </tbody>
           </table>
-          <div class="subtotal">
-              <p>SUBTOTAL <span>Rs. 4,498</span></p>
-          </div>
-          <button class="checkout-btn">CHECKOUT</button>
+          <!-- Coupon Section -->
+        <div class="coupon-section">
+            <h3>Coupon</h3>
+            <div class="coupon-input">
+                <input type="text" placeholder="Enter coupon code">
+                <button class="apply-coupon-btn">Apply</button>
+            </div>
+        </div>
+      </section>
+ <!-- Order Summary -->
+    <div class="order-summary">
+        <div class="summary-item">
+            <p class="items">Subtotal :</p>
+            <span class="cart-subtotal">Rs. 8,148</p>
+        </div>
+        <div class="summary-item">
+            <p class="items">Discount :</p>
+            <span class="cart-discount">Rs. 0</span>
+        </div>
+        <div class="summary-item">
+            <p class="items">Delivery Charges:</p>
+            <span class="cart-delivery">Rs. 15</span>
+        </div>
+        <hr>
+        <div class="summary-item total">
+            <strong class="items">Total</strong>
+            <span class="cart-total-price">Rs. 0</span>
+        </div>
+    </div> 
+
+    <!-- Checkout Section -->
+    <div class="checkout-section">
+        <button class="checkout-btn">Checkout</button>
+        <button class="continue-shopping-btn">Continue Shopping</button>
+    </div>
+   <!---------Footer Starts------->
+   <footer>
+    <div class="rows">
+      <div class="cols">
+        <img src="logo.png" class="logo">
+        <p class="about"><B>Powered By:</B> Kanhaiyalal Pragdas Bartan wale</p>
       </div>
+      <div class="cols">
+        <h5>PRODUCT SERIES</h5>
+        <ul>
+          <li><a href="#">Cooker</a></li>
+          <li><a href="#">Cookware</a></li>
+          <li><a href="#">Gift-Items</a></li>
+          <li><a href="#">Frying Pans</a></li>
+          <li><a href="#">Handi</a></li>
+        </ul> </div>
+      <div class="cols">
+        <h5>QUICK LINKS</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Return & Exchange</a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h5>CONNECT WITH US</h5>
+        <p>+91-9598050345 <br> (Girish Chandra Agarwal)</p>
+        <p>+91-9598050348 <br> (Anubhav Agarwal)</p>
+      </div>
+    </div>
+    <hr>
+    <div class="copyright">
+      <p style="text-align: center;">&copy;2024 | Kanhaiyalal Pragdas Bartan Wale | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+
+      <!---------Footer Ends------->
+
+   <!--Sricpting-->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="muskan.js"></script>
   </body>
   </html>
