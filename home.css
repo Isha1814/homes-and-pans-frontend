@@ -317,7 +317,7 @@ body{
 }
 .card-img-overlay{
     font-weight: bold;
-    color: var(--bg-clr);
+    color: #3b3b3b;
     text-align:center;
     margin-top: 125px;
     cursor: pointer;
@@ -335,7 +335,7 @@ body{
     width: 100px;
     padding: 0px;
     color: var(--bg-clr);
-    background-color: var(--dark-clr);
+    background-color:  #3b3b3b;
 }
 /*----------------About--------*/
 .part{
@@ -350,8 +350,8 @@ body{
 .prototype {
     width: 50%;
 }
-.prototype img{
-    margin: 20px;
+.prototype video{
+    margin: 30px;
 }
 .text{
     width: 50%;
