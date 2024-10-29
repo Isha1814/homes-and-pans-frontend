@@ -270,11 +270,8 @@ h1 {
     padding: 5px 10px;
     width:20%;
     vertical-align: middle;
-    /* border-bottom: 1px solid #000; */
 }
 thead th {
-    /* background-color: #333; */
-    /* color: white; */
     font-weight: bold;
 
 }
@@ -310,6 +307,7 @@ thead th {
 .product-name {
     margin-top: 5px; /* Space between the image and the name */
     font-weight: bold;
+    font-size: 1rem;
     color: #333; 
     margin-right:30px;
 }
@@ -320,7 +318,6 @@ thead th {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    /* margin-right: 500px; */
     text-align: center;
     cursor: pointer;
 }
@@ -376,17 +373,14 @@ thead th {
     padding: 5px 0;
 }
 .coupon-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:1px;
+    display: block;
+    gap:5px;
     margin-top: 10px;
-    /* border-top:2px solid #ddd; */
 }
 .coupon-section h3{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     padding:10px;
-    margin-left: 70px;
+    margin-left: 50px; 
     text-align: left;
 }
 
@@ -394,17 +388,17 @@ thead th {
     display:flex;
     justify-content: center;
     align-items: center;
-    gap:15px;
     margin-right: 10px;
     margin-top: 10px;
 }
 
 .coupon-input input{
-    width:300px;
+    width:60%;
     padding:10px;
     font-size: 16px;
     border:2px solid #CEE7E1;
     border-radius: 5px;
+    margin-left:50px;
     transition:border-color 0.3s ease;
 }
 .coupon-input input:focus {
@@ -412,14 +406,13 @@ thead th {
 }
 
 .apply-coupon-btn{
-    width:25%;
+    width:20%;
     padding:10px 20px;
     background-color: #07665E;
     color:#f7f9fa;
     font-size: 1rem;
     border-radius: 25px;
     cursor:pointer;
-    margin-left:90px;
     transition: background-color 0.3s ease ,transform 0.2s ease;
 }
 .apply-coupon-btn:hover{
@@ -433,7 +426,6 @@ thead th {
     text-align: right;
     font-size: 1rem;
     padding: 20px;
-    /* margin-top: 5px; */
     margin-bottom: 60px;
 
 } 
@@ -448,11 +440,14 @@ thead th {
 .items{
     text-align: left;
     margin-left: 60px;
+    font-size: 20px;
 }
-.price{
+.cart-subtotal,.cart-discount,.cart-delivery,.cart-total-price{
     text-align: right;
-    margin-right: 100px;
-} 
+    margin-right:130px;
+    font-size: 20px;
+
+}
 .summary-item.total{
     font-size: 1.2rem;
     font-weight: bold;
@@ -462,39 +457,41 @@ thead th {
 }
 
 .checkout-section{
-    margin-bottom: 70px;
+    display: block;
+    justify-content: space-between; /* This will evenly space out the buttons */
+    align-items: center; 
+    margin-bottom: 100px;
+    border-top: 2px solid #ddd;
+
+
 }
 .checkout-btn,.continue-shopping-btn{
-    width:30%;
+    width:60%;
     padding:15px;
-    font-size:14px;
-    border:none;
+    font-size:17px;
+    border:none; 
+    margin:10px auto;
     border-radius: 40px;
     cursor:pointer;
-    margin-top: none;
     transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 .checkout-btn{
     background-color: #07665E;
     color:white;
-    padding:8px 16px;
-    gap:8px;
-    min-height: 40px;
+    min-height: 50px;
     position:relative; 
     text-transform: uppercase;
-    float:left;
-    margin-left: 40px;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    transform: scale(1.05); 
-
+    margin-left: 300px; 
+    margin-bottom: 15px;
 }
 
 .continue-shopping-btn{
     background-color: #07665E;
     color:white;
-    float:right;
-    margin-right: 40px;
+    float:right; 
+    margin-right: 300px;
     text-transform: uppercase;
+    border-bottom: 60px; 
 }
 .checkout-btn:hover{
     background-color: #05564e;
@@ -512,6 +509,7 @@ footer{
     position: absolute;
     background-color: var(--dark-clr);
     color: var(--bg-clr);
+    
 }
 .rows{
     width: 85%;
