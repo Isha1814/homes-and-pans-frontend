@@ -23,18 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.cart-table tbody tr').forEach(row => {
             const priceText = row.querySelector('.product-price').textContent;
             const price = parseFloat(priceText.replace(/[^0-9.-]+/g,""));
-            const quantity = parseInt(row.querySelector('.cart-quantity').value);
+            const quantity = parseFloat(row.querySelector('.cart-quantity').value)||0;
             const totalPrice = price * quantity;
 
             // Update the total for the current row
-            row.querySelector('.product-total').textContent = `Rs. ${totalPrice.toFixed(2)}`;
+            row.querySelector('.product-total').textContent = `Rs ${totalPrice}`;
             
             // Add to subtotal
             subtotal += totalPrice;
         });
 
         // Update subtotal in the order summary
-        document.querySelector('.cart-subtotal').textContent = `Rs. ${subtotal.toFixed(2)}`;
+        document.querySelector('.cart-subtotal').textContent = `Rs ${subtotal}`;
 
         // Calculate the delivery charges and final total
         const deliveryCharges = parseFloat(document.querySelector('.cart-delivery').textContent.replace(/[^0-9.-]+/g, "")) || 0;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const total = subtotal + deliveryCharges - discount;
 
         // Update total price in the order summary
-        document.querySelector('.cart-total-price').textContent = `Rs. ${total.toFixed(2)}`;
+        document.querySelector('.cart-total-price').textContent = `Rs ${total}`;
     }
 
     // Apply coupon
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Apply a 10% discount
             let subtotal = parseFloat(document.querySelector('.cart-subtotal').textContent.replace(/[^0-9.-]+/g, ""));
             let discount = subtotal * 0.10; // 10% discount
-            document.querySelector('.cart-discount').textContent = `Rs. ${discount.toFixed(2)}`;
+            document.querySelector('.cart-discount').textContent = `Rs ${discount}`;
 
             // Recalculate total after applying discount
             updateTotals();

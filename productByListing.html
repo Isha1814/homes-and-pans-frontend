@@ -1,113 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata and links to external stylesheets (Bootstrap, Font Awesome) -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Detail Page</title>
-  <!-- Link to custom stylesheet -->
-  <link rel="stylesheet" href="productbylisting.css">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail Page</title>
+    <link rel="stylesheet" href="productbylisting.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
+
 <body>
 
+    <!--Header Starts-->
+    <header class="top-nav-bar">
+        <label>
+            <input type="checkbox" class="input">
+            <div class="toggle">
+                <span class="top_line common"></span>
+                <span class="middle_line common"></span>
+                <span class="bottom_line common"></span>
+            </div>
+            <div class="side-menu">
+                <ul class="ul">
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="category.html">PRODUCTS</a></li>
+                    <li><a href="#">Pressure Cooker<i class="fa fa-angle-right"></i></a>
+                        <ul>
+                            <li>Aluminium</li>
+                            <li>Hard Anodised</li>
+                            <li>Stainless Steel</li>
+                            <li>Ceramic Nonstick</li>
+                        </ul>
+                        <li><a>Frying Pan<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Tava<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Deep fry pans<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Saucepans<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Handi & Bowls<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Stewpot<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Pan<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Casserole<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Patila<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Kadhai<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Cookware Set<i class="fa fa-angle-right"></a></i></li>
+                <li><a>Parts & Accessories<i class="fa fa-angle-right"></a></i></li>
+              </ul>
+            </li>
+                </ul>
+            </div>
+        </label>
+        <span><a href="#home.html" class="logo"><img src="Images/logo.png" alt="Logo"></a></span>
+        <div class="search-box">
+            <input type="text" placeholder="Search" class="form-control">
+            <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+        <span><a href="#"><i class="fa-solid fa-user"></i></a></span>
+        <span><a href="#"><i class="fa-solid fa-heart"></i></a></span>
+        <span><a href="addtocart.html"><i class="fa-solid fa-cart-shopping"></i></a></span>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    </header>
 
-  <!--Header Starts-->
-  <header class="top-nav-bar">
-    <span><a href="#side-menu"><i class="fa fa-bars" onclick="hideshow();"></i></a></span>
-    <span><a href="index.html" class="logo"><img src="logo.png"></a></span>
-    <div class="search-box">
-      <input type="text" placeholder="Search" class="form-control">
-      <span class="input-group-text"><i class="fa fa-search"></i></span>
-    </div>
-      <span><a href="#"><i class="fa-solid fa-user"></i></a></span>
-      <span><a href="#"><i class="fa-solid fa-heart"></i></a></span>
-      <span><a href="shailyindex.html"><i class="fa-solid fa-cart-shopping"></i></a></span>
-</header>
-   <!--Header Ends-->
+    <!--Header Ends-->
+
+    <!-- Main container for product details -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Product Main Image -->
+                <img id="mainProductImage" class="product-image img-fluid" src="https://m.media-amazon.com/images/I/71EIlygKl+L._SL1500_.jpg" alt="Stainless Steel Fry Pan">
+                
+                <!-- Product Thumbnails -->
+                <div class="product-gallery mt-3">
+                    <img src="https://m.media-amazon.com/images/I/71EIlygKl+L._SL1500_.jpg" onclick="changeImage(this)" alt="Image 1" class="img-thumbnail">
+                    <img src="https://m.media-amazon.com/images/I/71XGBG1EFWL._SL1500_.jpg" onclick="changeImage(this)" alt="Image 1" class="img-thumbnail">
+                    <img src="https://m.media-amazon.com/images/I/71ljGaVc9cL._SL1500_.jpg" onclick="changeImage(this)" alt="Image 2" class="img-thumbnail">
+                    <img src="https://m.media-amazon.com/images/I/71A9neWoGBL._SL1500_.jpg" onclick="changeImage(this)" alt="Image 3" class="img-thumbnail">
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h2>Stainless Steel Fry Pan</h2>
+                <h5><strong>MRP:</strong> <span class="mrp">₹2,500</span></h5>
+                <h5><strong>Offer Price:</strong > <span class="discount-price">₹1,999</span></h5>
+                <h5><strong>Availability:</strong> In Stock</h5>
+
+                <!-- Rating -->
+                <div class="rating">
+                    <p><strong>Rating:</strong></p>
+                    <div class="stars">  ★★★★☆ (4/5)
+                    </div>
+                    <p class="rating-text">Based on 100+ reviews</p>
+                </div>
+
+                <!-- Quantity Controls -->
+                <td width="30%" style="padding: 2.1rem 0rem; width: 100%; border: none; background-color: hsl(240, 3%, 94%); border-radius: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; height: 50%; border: 1px solid hsl(240, 3%, 80%);">
+                    <div style="display: flex; align-items: center; border: 1px solid hsl(240, 3%, 80%); border-radius: 0.5rem; padding: 0.5rem; background-color: white;">
+                        <b>
+                            <input type="button" name="ctl00$content_body$btn_sub" value="  - " onclick="updateQuantity(-1);" id="content_body_btn_sub" class="price-btn__remove price-btn" style="font-size: 25px; font-weight: 1500; color: black(0, 100%, 43%); border: none; cursor: pointer;">
+                        </b>
+                        
+                        <span id="content_body_lbl_qty" class="price-btn__txt" style="display:inline-block; width: 25px; text-align: center;">1</span>
+                        
+                        <b>
+                            <input type="button" name="ctl00$content_body$btn_add" value="  +  " onclick="updateQuantity(1);" id="content_body_btn_add" class="price-btn__add price-btn" style="font-size: 25px; font-weight: 1000; color: black(0, 100%, 43%); border: none; cursor: pointer;">
+                        </b>
+                    </div>
+                </td>
+                
+                
+
+                <!-- Size Options -->
+                <div class="size-options">
+                    <h5 class="product-item-caption-select-title">Size:</h5>
+                    <div class="button-container">
+                        <button class="btn btn-outline-secondary oval-button" data-value="22cm - 2.0L - Serves 4-5">22cm - 2.0L - Serves 4-5</button>
+                        <button class="btn btn-outline-secondary oval-button" data-value="26cm - 3.3L - Serves 6-7">26cm - 3.3L - Serves 6-7</button>
+                    </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-success">Buy Now</button>
+                </div>
+
+                <!-- Product Description -->
+                <div class="product-description mt-4" style="color: rgb(10, 0, 0);">
+                    <h5><strong>Product Description:</strong></h5>
+                    <table class="specs" height="200px" style="margin-top: 1.0rem;margin-right: 1.0rem; margin-left: 1.0rem;">
+                    </tbody>
+                    </table>
+                    <h3 class="price-sub__heading"><span id="content_body_lbl_heading">Die Cast Frying Pan 22 cm with Glass Lid (IDCF22G)</span></h3>
+                    <table class="specs" height="200px" style="margin-top: 1.0rem;margin-right: 1.0rem; margin-left: 1.0rem;">
+                        <tbody>
+                            <tr>
+                                <td width="45%" height="50%">
+                                    <ul class="price-txt">
+                                        <li style="margin-bottom: 5px;"><label id="content_body_span11">Diameter: </label><span id="content_body_lbl_dia">24 cm</span></li>
+                                        <li style="margin-bottom: 5px;">Thickness: <span id="content_body_lbl_thick">6 mm</span></li>
+                                        <li style="margin-bottom: 5px;">Capacity: <span id="content_body_lbl_capacity">1.8L</span></li>
+                                        <li style="margin-bottom: 5px;">Carton dimensions (WxDxH): <span id="content_body_lbl_carton">339 x 266 x 116 mm</span></li>
+                                        <li style="margin-bottom: 5px;">Weight in carton: <span id="content_body_lbl_wgt">1.78 kg</span></li>
+                                        <li style="margin-bottom: 5px;">Guarantee: <span id="content_body_lbl_yr">1 years</span></li>
+                                    </ul>
+                                </td>
+                                <td width="10%">
+                                </td>
+                                <td width="45%">
+                                    <ul>
+                                        <li class="li_style" id="li_1">Extra-thick 6 mm base - Food will not burn or stick</li>
+                                        <li class="li_style" id="li_2">Durable Nonstick Coating Inside - High-Grade Stainless Steel</li>
+                                        <li id="content_body_li_3" class="li_style">Hi-Tech Ceramic Coating outside - Scratch-and-stain-resistant</li>
+                                        <li id="content_body_li_4" class="li_style">Ezee-Pour, No-drip Spouts - For left or right handed pour</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+        </div>
+
+        <!-- Horizontal Line to Separate Related Products -->
+        <hr class="my-5">
+
+        <!-- Related Products Section -->
+        <div class="container my-5">
+            <h4>Related Products</h4>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <!-- Product Card 1 -->
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="https://m.media-amazon.com/images/I/71eqZ8KLYxL._SL1500_.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Hawkins Ceramic Nonstick Frying Pan, 23 cm Diameter, Induction Fry Pan with Glass Lid, Granite Omlette Egg Pan, Fish Pan, Blue (ICF23G)</h5>
+                            <p class="card-text">₹999</p>
+                            <button class="btn btn-primary mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+       
+                <!-- Product Card 2 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://m.media-amazon.com/images/I/71Skkq9cN4L._SL1500_.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">
+                      Hawkins Ceramic Nonstick 2.5 Litre Deep Kadhai, Induction Deep Fry Pan with Glass Lid, Granite Kadai (ICK25G)</h5>
+                    <p class="card-text">₹2999</p>
+                  <button class="btn btn-primary mt-3">Add to Cart</button>
+                </div>
+            </div>
+        </div>
         
-
-      
-<!-- Main container for product details -->
-  <div class="container my-4">
-    <!-- Product Section -->
-    <div class="row">
-      <div class="col-md-6">
-        <!-- Product Main Image -->
-        <img id="mainProductImage" class="product-image img-fluid" src="https://m.media-amazon.com/images/I/71tq3DCFKSL.SL1500.jpg" alt="Product Image">
+        <!-- Product Card 3 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://m.media-amazon.com/images/I/717pe6bmy0L._SL1500_.jpg" class="card-img-top" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Hawkins Ceramic Nonstick Handi with Glass Lid, 3 Litre, Induction Biryani Pot, Granite Casserole (ICH30G)</h5>
+                    <p class="card-text">₹2599</p>
+                  <button class="btn btn-primary mt-3">Add to Cart</button>
+                </div>
+            </div>
+        </div>
         
-        <!-- Product Thumbnails -->
-        <div class="product-gallery mt-3">
-          <img src="https://m.media-amazon.com/images/I/71tq3DCFKSL.SL1500.jpg" onclick="changeImage(this)" alt="Image 1">
-          <img src="https://m.media-amazon.com/images/I/81PGkZEOEkL.SL1500.jpg" onclick="changeImage(this)" alt="Image 2">
-          <img src="https://m.media-amazon.com/images/I/71nFwIl4F7L.SL1500.jpg" onclick="changeImage(this)" alt="Image 3">
+        <!-- Product Card 4 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://m.media-amazon.com/images/I/71wXUuOR5JL._SL1500_.jpg" class="card-img-top" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Hawkins Futura 3.25 Litre Curry Pan, Non Stick Saute Pan with Glass Lid, Deep Pan for Frying, Black (NCP325G)</h5>
+                    <p class="card-text">₹1999</p>
+                  <button class="btn btn-primary mt-3">Add to Cart</button>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <script src="script.js"></script>
-
-
-      <!-- Product Details -->
-      <div class="col-md-6">
-        <h2>Stainless Steel Fry Pan</h2>
-        <h5><strong>MRP:</strong> <span class="mrp">₹2,500</span></h5>
-        <h5><strong>Price:</strong> <span class="discount-price">₹1,999</span></h5>
-        <h5><strong>Size:</strong> 24cm</h5>
-        <h5><strong>Availability:</strong> In Stock</h5>
-
-        <!-- Rating -->
-        <div class="rating">
-          <p>Rating:</p>
-          <div class="stars">
-            ★★★★☆ (4/5)
-          </div>
-        </div>
-
-        <img src="path_to_logo_image/logo.png" alt="Logo" width="50px" height="50px">
-
-
-
-        <!-- Action Buttons -->
-        <div class="action-buttons mt-3">
-          <button class="btn btn-primary">Add to Cart</button>
-          <button class="btn btn-success">Buy Now</button>
-          <button class="btn btn-warning">Compare</button>
-        </div>
-
-        <!-- Return/Refund Information -->
-        <p class="mt-4">Easy returns within 7 days of delivery.</p>
-      </div>
     </div>
+</div>
 
-    <!-- Related Products Section -->
-    <div class="related-products mt-5">
-      <h3>Related Products</h3>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="https://m.media-amazon.com/images/I/71nFwIl4F7L.SL1500.jpg" alt="Related Product 1" class="img-fluid">
-          <p>Non-stick Tawa</p>
-        </div>
-        <div class="col-md-3">
-          <img src="https://m.media-amazon.com/images/I/81PGkZEOEkL.SL1500.jpg" alt="Related Product 2" class="img-fluid">
-          <p>Stainless Steel Kadhai</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--  Footer -->
+<!---------Footer Starts------->
 <footer>
     <div class="rows">
       <div class="cols">
-        <img src="logo.jpg" class="logo">
-        <p class="about">Kanhaiyalal Pragdas Bartan wale utensils feature shiny stainless steel and durable aluminum cookers, blending style with practicality in vibrant designs.</p>
+        <img src="Images/logo.png" class="logo">
+        <p class="about"><B>Powered By:</B>Kanhaiyalal Pragdas Bartan wale</p>
       </div>
       <div class="cols">
-        <h4>Know More <div class="underline"><span></span></div></h4>
+        <h5>PRODUCT SERIES</h5>
+        <ul>
+          <li><a href="#">Cooker</a></li>
+          <li><a href="#">Cookware</a></li>
+          <li><a href="#">Gift-Items</a></li>
+          <li><a href="#">Frying Pans</a></li>
+          <li><a href="#">Handi</a></li>
+        </ul> </div>
+      <div class="cols">
+        <h5>QUICK LINKS</h5>
         <ul>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Privacy Policy</a></li>
@@ -117,7 +245,7 @@
         </ul>
       </div>
       <div class="cols">
-        <h4>Contact Us <div class="underline"><span></span></div></h4>
+        <h5>CONNECT WITH US</h5>
         <p>+91-9598050345 <br> (Girish Chandra Agarwal)</p>
         <p>+91-9598050348 <br> (Anubhav Agarwal)</p>
       </div>
@@ -128,9 +256,14 @@
     </div>
   </footer>
 
-<script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+
+
+      <!---------Footer Ends------->
+ 
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
